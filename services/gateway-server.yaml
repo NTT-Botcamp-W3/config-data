@@ -1,0 +1,22 @@
+server:
+  port: 8080
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://host.docker.internal:8761/eureka
+      
+  instance:
+    prefer-ip-address: true
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: retailclient
+          uri: lb://retailclient
+          predicates:
+          - Path=/retailclient/**
