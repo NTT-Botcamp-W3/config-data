@@ -20,3 +20,7 @@ spring:
           uri: lb://bank-customers
           predicates:
           - Path=/customer/**
+        - id: bank-products-saving-accounts
+          uri: lb://bank-products-saving-accounts
+          predicates:
+          - Path=/savingAccounts/**
