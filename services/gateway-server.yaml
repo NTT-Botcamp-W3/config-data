@@ -9,6 +9,7 @@ eureka:
       
   instance:
     prefer-ip-address: true
+    hostname: localhost
 spring:
   cloud:
     gateway:
