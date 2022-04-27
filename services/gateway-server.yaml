@@ -25,3 +25,7 @@ spring:
           uri: lb://bank-products-saving-accounts
           predicates:
           - Path=/savingAccounts/**
+        - id: bank-products-fixed-accounts
+          uri: lb://bank-products-fixed-accounts
+          predicates:
+          - Path=/fixedAccounts/**
