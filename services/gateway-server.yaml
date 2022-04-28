@@ -29,3 +29,7 @@ spring:
           uri: lb://bank-products-fixed-accounts
           predicates:
           - Path=/fixedAccounts/**
+        - id: bank-products-current-accounts
+          uri: lb://bank-products-current-accounts
+          predicates:
+          - Path=/currentAccounts/**
