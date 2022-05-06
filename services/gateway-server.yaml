@@ -33,3 +33,11 @@ spring:
           uri: lb://bank-products-current-accounts
           predicates:
           - Path=/currentAccounts/**
+        - id: bank-yanki
+          uri: lb://bank-yanki
+          predicates:
+          - Path=/yanki/**
+        - id: bank-bootcoin
+          uri: lb://bank-bootcoin
+          predicates:
+          - Path=/bootcoin/**
